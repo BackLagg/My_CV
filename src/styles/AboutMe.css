@@ -1,0 +1,70 @@
+/* Контейнер для раздела "Обо мне" */
+.about-me-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+/* Стили для заголовков */
+.about-me-container h2,
+.about-me-container h3 {
+    text-align: center;
+}
+
+/* Список качеств, хобби и языков */
+.qualities,
+.hobbies,
+.languages {
+    margin-bottom: 20px;
+}
+
+.qualities ul,
+.hobbies ul,
+.languages ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.qualities li,
+.hobbies li,
+.languages li {
+    margin-bottom: 5px;
+}
+
+.qualities ul li,
+.hobbies ul li,
+.languages ul li {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.qualities ul li::after,
+.hobbies ul li::after,
+.languages ul li::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: #ccc;
+    /* Цвет разделителя */
+    margin-top: 5px;
+}
+
+/* Секция "Немного о себе" */
+
+.about-me-text p {
+
+    margin: 0;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+    .about-me-container {
+        padding: 10px;
+    }
+}

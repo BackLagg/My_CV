@@ -1,0 +1,123 @@
+/* Добавляем стили для фона основного контейнера */
+.light-main-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f0e5f5;
+  /* Бледно-фиолетовый фон для светлой темы */
+}
+
+.dark-main-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  gap: 20px;
+  padding: 20px;
+  background-color: #333;
+  /* Светло-серый фон для тёмной темы */
+}
+
+.light-section {
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  /* Белый фон для светлой темы */
+  color: #5e4b8c;
+  /* Фиолетовый текст */
+  max-width: 70%;
+  /* Максимальная ширина 60% */
+  margin: 0 auto;
+  width: 100%;
+}
+
+.dark-section {
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #222;
+  /* Черный фон для темной темы */
+  color: #ff8c00;
+  /* Оранжевый текст */
+  max-width: 70%;
+  /* Максимальная ширина 60% */
+  margin: 0 auto;
+  width: 100%;
+}
+
+.about-me-title {
+  text-align: center;
+  /* Центрируем заголовок */
+  font-family: 'Helvetica', sans-serif;
+  /* Шрифт заголовка */
+  margin-bottom: 20px;
+  /* Отступ снизу для разделения с остальным контентом */
+}
+
+.name-address-container {
+  display: flex;
+  /* Используем flexbox для выравнивания */
+  align-items: center;
+  /* Выравниваем по верхнему краю */
+  gap: 20px;
+  /* Расстояние между ФИО и картинкой */
+  flex-wrap: wrap;
+  /* Позволяем элементам переходить на новую строку на узких экранах */
+}
+
+.name-block {
+  flex: 1;
+  /* Занимает оставшееся пространство */
+  min-width: 200px;
+  /* Минимальная ширина для корректного отображения */
+}
+
+.profile-pic {
+  flex: 0 0 auto;
+  /* Картинка занимает фиксированное место */
+  margin-left: 20px;
+  /* Отступ слева для расстояния */
+}
+
+.profile-pic img {
+  border-radius: 10px;
+  width: 200px;
+  /* Ширина фотографии */
+  height: 200px;
+  /* Автоматическая высота */
+}
+
+.contact-info-block {
+  /* Используем flexbox для выравнивания */
+  align-items: center;
+  margin-bottom: 10px;
+  /* Отступ снизу заголовка контактной информации */
+}
+
+
+/* Медиа-запросы для узких экранов */
+@media (max-width: 570px) {
+  .name-address-container {
+    flex-direction: column;
+    /* На узких экранах элементы располагаются вертикально */
+    align-items: center;
+    /* Центрируем элементы */
+  }
+
+  .profile-pic {
+    margin-left: 0;
+    /* Убираем отступ слева для картинки */
+    margin-top: 20px;
+    /* Отступ сверху для разделения */
+  }
+
+}
+
+@media (max-width: 690px) {
+  .light-section {
+    max-width: 95%;
+    width: 100%;
+  }
+}

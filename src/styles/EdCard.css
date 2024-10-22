@@ -1,0 +1,40 @@
+.education-section {
+  margin-top: 20px;
+}
+
+.education-title {
+  text-align: center;
+  font-family: 'Helvetica', sans-serif;
+  margin-bottom: 20px;
+}
+
+.dark-card {
+  border: 1px solid #ccc;
+  /* Светло-серая рамка */
+  border-radius: 10px;
+  /* Закругление углов */
+  padding: 15px;
+  /* Отступ внутри карточки */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Тень для карточки */
+  background-color:  #333;
+  /* Белый фон */
+  margin-bottom: 20px;
+  /* Отступ снизу карточки */
+}
+
+.light-card {
+  border: 1px solid #ccc;
+  /* Светло-серая рамка */
+  border-radius: 10px;
+  /* Закругление углов */
+  padding: 15px;
+  /* Отступ внутри карточки */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Тень для карточки */
+  background-color: #fff;
+  /* Белый фон */
+  margin-bottom: 20px;
+  /* Отступ снизу карточки */
+}
+

@@ -1,0 +1,135 @@
+/* Основные стили хедера */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Добавлено больше отступа */
+  background-color: #e0c1d4; /* Цвет фона хедера */
+  position: fixed; /* Фиксируем хедер */
+  color: #5e4b8c;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  z-index: 1000; /* Обеспечиваем, чтобы хедер был сверху */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Лёгкая тень для хедера */
+}
+
+.center {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold; /* Увеличим вес шрифта для логотипа */
+}
+
+.switches {
+  display: flex;
+}
+
+.mobile-switches {
+  display: flex;
+  align-items: center; /* Выравнивание по центру по вертикали */
+}
+
+/* Скрываем переключатели на мобильных устройствах */
+.desktop-only {
+  display: none;
+}
+
+/* Бургер меню */
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.burger-bar {
+  width: 25px;
+  height: 3px;
+  background-color: #5e4b8c; /* Цвет бургер-меню */
+  margin: 4px;
+}
+
+/* Навигация в мобильной версии */
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  background-color: #f0e5f5; /* Цвет фона мобильного меню */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.mobile-nav ul li {
+  margin-bottom: 20px;
+}
+
+.mobile-nav ul li a {
+  text-decoration: none;
+  color: #5e4b8c; /* Цвет ссылок в мобильном меню */
+  font-size: 24px;
+}
+
+/* Кнопка закрытия меню */
+.close-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Медиазапросы */
+@media (max-width: 768px) {
+  .burger-menu {
+    display: flex;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .switches {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-nav {
+    display: none;
+  }
+  .desktop-only {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Темная тема */
+.dark-header {
+  background-color: #282C34; /* Цвет фона для темной темы */
+  color: #C29545;
+}
+
+.dark-header .mobile-nav {
+  background-color: #301B2B; /* Темный фон для мобильного меню в темной теме */
+}
+
+.dark-header .mobile-nav ul li a {
+  color: #ddd; /* Светлый цвет текста для темной темы */
+}

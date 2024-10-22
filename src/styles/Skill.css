@@ -1,0 +1,81 @@
+.skills-container {
+  display: flex;
+  flex-wrap: wrap; /* Позволяет элементам переходить на следующую строку */
+  gap: 20px; /* Отступы между блоками */
+  justify-content: center; /* Центрируем, если блоков меньше чем три */
+}
+
+.skill-container {
+  position: relative;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% / 4); /* Прямоугольник с соотношением сторон 3:4 */
+  aspect-ratio: 4 / 3;
+}
+
+.skill-container:hover {
+  transform: translateY(-10px); /* Лёгкий подъём карточки при наведении */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Увеличение тени при наведении */
+}
+.dark-section .skill-container:hover {
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2); /* Тень для тёмной темы */
+}
+
+
+.skill-container h3 {
+  margin: 0;
+  text-align: center;
+}
+
+.skill-container .ellipsis {
+  font-size: 24px;
+}
+
+.skill-details {
+  opacity: 0;
+  max-height: 0;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.skill-container.expanded {
+  width: 80%; /* Разворачиваем блок на всю ширину контейнера */
+  aspect-ratio: auto; /* Убираем фиксированное соотношение */
+  padding: 40px; /* Добавляем больше пространства для подробностей */
+}
+
+.skill-container.expanded .ellipsis {
+  display: none; /* Убираем троеточие, когда блок раскрыт */
+}
+
+.skill-container.expanded .skill-details {
+  opacity: 1;
+  max-height: 200px; /* Ограничиваем высоту содержимого */
+}
+
+.skill-container.expanded h3 {
+  font-size: 28px;
+}
+
+.dark-skills {
+  border: 1px solid #ccc;
+  /* Светло-серая рамка */
+  border-radius: 10px;
+  background-color: #333;
+  color: #ff8c00;
+}
+
+.light-skills {
+  border: 1px solid #ccc;
+  /* Светло-серая рамка */
+  border-radius: 10px;
+  background-color: #fff;
+  color: #5e4b8c;
+}
